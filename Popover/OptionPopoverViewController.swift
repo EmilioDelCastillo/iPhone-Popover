@@ -8,7 +8,14 @@
 import UIKit
 
 protocol OptionItemListViewControllerDelegate: AnyObject {
-    func didSelectOptionItem(_ controller: OptionPopoverViewController, _ item: OptionItem)
+    /**
+     Tells the delegate an option has been selected.
+     - Parameter viewController: The popover view controller.
+     - Parameter item: The selected item.
+     
+     The delegate must handle the dismissal of the popover in this method.
+     */
+    func didSelectOptionItem(from viewController: OptionPopoverViewController, with item: OptionItem)
 }
 
 class OptionPopoverViewController: UIViewController {

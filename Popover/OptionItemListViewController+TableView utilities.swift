@@ -28,7 +28,7 @@ extension OptionPopoverViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = items[indexPath.section][indexPath.row]
-        delegate?.didSelectOptionItem(self, item)
+        delegate?.didSelectOptionItem(from: self, with: item)
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
